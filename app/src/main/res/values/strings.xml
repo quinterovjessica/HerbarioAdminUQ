@@ -8,11 +8,9 @@
     <string name="action_settings">Settings</string>
 
 
-
     <!-- Variables del menu administrador layout nav_header_main-->
     <string name="nombre_herbario">HERBARIO UNIQUINDIO</string>
-    <string name="rol_herbario"> Administrador</string>
-
+    <string name="rol_herbario">Administrador</string>
 
 
     <!-- Variables del menu administrador layout activity_main_drawer-->
@@ -21,7 +19,6 @@
     <string name="opc_listar_plantas_ingresadas">LISTAR PLANTAS INGRESADAS</string>
     <string name="opc_datos_cuenta">DATOS DE LA CUENTA</string>
     <string name="opc_salir">SALIR</string>
-
 
 
     <!-- TODO: Remove or change this placeholder text -->

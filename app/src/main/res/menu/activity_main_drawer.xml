@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <!-- layout que contiene   -->
+        <item
+                android:id="@+id/nav_lista_plantas"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="@string/opc_lista_plantas"/>
+
+        <!-- layout que contiene   -->
+        <item
+                android:id="@+id/nav_ingrese_planta"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/opc_ingresar_planta"/>
+
+        <!-- layout que contiene   -->
+        <item
+                android:id="@+id/nav_listar_planta_ingresada"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="@string/opc_listar_plantas_ingresadas"/>
+
+        <!-- layout que contiene   -->
+        <item
+                android:id="@+id/nav_datos_cuenta"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/opc_datos_cuenta"/>
+
+        <!-- layout que contiene   -->
+        <item
+                android:id="@+id/nav_salir"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/opc_salir"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Share"/>
+            <item
+                    android:id="@+id/nav_send"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Send"/>
+        </menu>
+    </item>
+
+</menu>

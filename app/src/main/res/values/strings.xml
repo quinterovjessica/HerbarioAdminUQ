@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">HerbarioAdminUQ</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+
+    <!-- Variables del menu administrador layout nav_header_main-->
+    <string name="nombre_herbario">HERBARIO UNIQUINDIO</string>
+    <string name="rol_herbario"> Administrador</string>
+
+
+
+    <!-- Variables del menu administrador layout activity_main_drawer-->
+    <string name="opc_lista_plantas">LISTA DE PLANTAS</string>
+    <string name="opc_ingresar_planta">INGRESAR PLANTAS</string>
+    <string name="opc_listar_plantas_ingresadas">LISTAR PLANTAS INGRESADAS</string>
+    <string name="opc_datos_cuenta">DATOS DE LA CUENTA</string>
+    <string name="opc_salir">SALIR</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

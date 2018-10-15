@@ -9,7 +9,7 @@
         <item
                 android:id="@+id/nav_lista_plantas"
                 android:icon="@drawable/ic_menu_camera"
-                android:title="@string/opc_lista_plantas"/>
+                android:title= "@string/opc_lista_plantas"/>
 
         <!-- layout que contiene   -->
         <item

@@ -65,13 +65,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Aqui es donde ejecuta las funciones
         when (item.itemId) {
             R.id.nav_lista_plantas -> {
-                // Handle the camera action
+              loadFirst(frag1 = FirstFragment())
             }
             R.id.nav_ingrese_planta -> {
+                loadSecond(frag2 = SecondFragment())
 
             }
             R.id.nav_listar_planta_ingresada -> {
-
+                loadThird(frag3 = ThirdFragment())
             }
             R.id.nav_datos_cuenta -> {
 
@@ -87,4 +88,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
+
+    private fun loadFirst(frag1: FirstFragment) {
+        val fm = supportFragmentManager.beginTransaction()
+        fm.replace( R.id.frameLayout, frag1)
+        fm.commit()
+    }
+
+    private fun loadSecond(frag2: SecondFragment) {
+        val fm = supportFragmentManager.beginTransaction()
+        fm.replace( R.id.frameLayout, frag2)
+        fm.commit()
+    }
+
+    private fun loadThird(frag3: ThirdFragment) {
+        val fm = supportFragmentManager.beginTransaction()
+        fm.replace( R.id.frameLayout, frag3)
+        fm.commit()
+    }
+
+
 }
+

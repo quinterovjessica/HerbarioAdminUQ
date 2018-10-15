@@ -9,6 +9,10 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import co.edu.uniquindio.vc.jq.herbarioadminuq.R
+import co.edu.uniquindio.vc.jq.herbarioadminuq.fragment.DatosCuentaFragment
+import co.edu.uniquindio.vc.jq.herbarioadminuq.fragment.ListaPlantasFragment
+import co.edu.uniquindio.vc.jq.herbarioadminuq.fragment.GestionarRecolectoresFragment
+import co.edu.uniquindio.vc.jq.herbarioadminuq.fragment.ListarPlantasPendientesFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -65,16 +69,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Aqui es donde ejecuta las funciones
         when (item.itemId) {
             R.id.nav_lista_plantas -> {
-              loadFirst(frag1 = FirstFragment())
-            }
-            R.id.nav_ingrese_planta -> {
-                loadSecond(frag2 = SecondFragment())
+
+                loadListarPlantas(fragListarPlantas = ListaPlantasFragment())
+
+
 
             }
-            R.id.nav_listar_planta_ingresada -> {
-                loadThird(frag3 = ThirdFragment())
+            R.id.nav_listar_plantas_pendientes -> {
+
+                loadListarPlantasPendientes(fragListarPlantasPendientes = ListarPlantasPendientesFragment())
+
+
+            }
+            R.id.nav_gestionar_recolectores -> {
+
+                loadGestionarRecolectores(fragGestionarRecolectores = GestionarRecolectoresFragment())
             }
             R.id.nav_datos_cuenta -> {
+
+                loadDatosCuenta(fragDatosCuenta = DatosCuentaFragment())
 
             }
             R.id.nav_salir -> {
@@ -89,19 +102,36 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    private fun loadFirst(frag1: FirstFragment) {
+    private fun loadListarPlantas(fragListarPlantas: ListaPlantasFragment) {
         val fm = supportFragmentManager.beginTransaction()
-        fm.replace( R.id.frameLayout, frag1)
+        fm.replace( R.id.frameLayout, fragListarPlantas)
         fm.commit()
     }
 
-    private fun loadSecond(frag2: SecondFragment) {
+
+    private fun loadListarPlantasPendientes(fragListarPlantasPendientes: ListarPlantasPendientesFragment) {
         val fm = supportFragmentManager.beginTransaction()
-        fm.replace( R.id.frameLayout, frag2)
+        fm.replace( R.id.frameLayout, fragListarPlantasPendientes)
         fm.commit()
     }
 
-    private fun loadThird(frag3: ThirdFragment) {
+
+    private fun loadGestionarRecolectores(fragGestionarRecolectores: GestionarRecolectoresFragment) {
+        val fm = supportFragmentManager.beginTransaction()
+        fm.replace( R.id.frameLayout, fragGestionarRecolectores)
+        fm.commit()
+    }
+
+
+    private fun loadDatosCuenta(fragDatosCuenta: DatosCuentaFragment) {
+        val fm = supportFragmentManager.beginTransaction()
+        fm.replace( R.id.frameLayout, fragDatosCuenta)
+        fm.commit()
+    }
+
+
+
+    private fun loadThird(frag3: ListarPlantasPendientesFragment) {
         val fm = supportFragmentManager.beginTransaction()
         fm.replace( R.id.frameLayout, frag3)
         fm.commit()

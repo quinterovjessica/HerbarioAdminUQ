@@ -6,9 +6,9 @@
 
     <TextView android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:text="segundo menu"
+              android:text="fragmento para listar plantas"
               android:gravity="center"
-              android:textSize="30sp"
-              android:textColor="@color/colorPrimary" />
+    android:textSize="30sp"
+    android:textColor="@color/colorPrimary" />
 
 </android.support.constraint.ConstraintLayout>

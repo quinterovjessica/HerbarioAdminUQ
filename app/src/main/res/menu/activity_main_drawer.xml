@@ -13,15 +13,15 @@
 
         <!-- layout que contiene   -->
         <item
-                android:id="@+id/nav_ingrese_planta"
+                android:id="@+id/nav_listar_plantas_pendientes"
                 android:icon="@drawable/ic_menu_gallery"
-                android:title="@string/opc_ingresar_planta"/>
+                android:title="@string/opc_listar_pendientes"/>
 
         <!-- layout que contiene   -->
         <item
-                android:id="@+id/nav_listar_planta_ingresada"
+                android:id="@+id/nav_gestionar_recolectores"
                 android:icon="@drawable/ic_menu_slideshow"
-                android:title="@string/opc_listar_plantas_ingresadas"/>
+                android:title="@string/opc_gestionar_recolectores"/>
 
         <!-- layout que contiene   -->
         <item

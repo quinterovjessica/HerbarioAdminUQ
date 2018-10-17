@@ -72,13 +72,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 loadListarPlantas(fragListarPlantas = ListaPlantasFragment())
 
-
-
             }
             R.id.nav_listar_plantas_pendientes -> {
 
                 loadListarPlantasPendientes(fragListarPlantasPendientes = ListarPlantasPendientesFragment())
-
 
             }
             R.id.nav_gestionar_recolectores -> {

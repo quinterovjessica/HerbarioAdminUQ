@@ -37,5 +37,8 @@
     <string name="actualizarClave">ACTUALIZAR CLAVE</string>
     <string name="tituloActualizarClave">ACTUALIZAR CONTRASEÑA</string>
 
-
+    <!-- fragmento principal-->
+    <string name="mensajePrincipal">HERBARIO UNIQUINDIO</string>
+    <string name="mensajePrincipal1">SESION DE ADMINISTRADOR</string>
+    <string name="mensajePrincipal2">NOMBRE ADMINISTRADOR</string>
 </resources>

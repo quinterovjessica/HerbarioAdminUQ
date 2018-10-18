@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 loadListarPlantas(fragListarPlantas = ListaPlantasFragment())
             }
-             // listar plantas pendientes sirve para Listar las plantas reportadas por el usuario: En esta opción el usuario ve todas las plantas que ha reportado y su estado actual (“aprobada”,
+            // listar plantas pendientes sirve para Listar las plantas reportadas por el usuario: En esta opción el usuario ve todas las plantas que ha reportado y su estado actual (“aprobada”,
             //“rechazada”, “en estudio”).
 
             R.id.nav_listar_plantas_pendientes -> {
@@ -96,9 +96,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 mostrarAgregarPokemon();
 
             }
-            R.id.nav_send -> {
 
-            }
+
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)

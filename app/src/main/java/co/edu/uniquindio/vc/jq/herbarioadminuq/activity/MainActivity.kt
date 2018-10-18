@@ -3,20 +3,20 @@ package co.edu.uniquindio.vc.jq.herbarioadminuq.activity
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
+import android.support.v4.app.DialogFragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import co.edu.uniquindio.vc.jq.herbarioadminuq.R
-import co.edu.uniquindio.vc.jq.herbarioadminuq.fragment.DatosCuentaFragment
-import co.edu.uniquindio.vc.jq.herbarioadminuq.fragment.ListaPlantasFragment
-import co.edu.uniquindio.vc.jq.herbarioadminuq.fragment.GestionarRecolectoresFragment
-import co.edu.uniquindio.vc.jq.herbarioadminuq.fragment.ListarPlantasPendientesFragment
+import co.edu.uniquindio.vc.jq.herbarioadminuq.fragment.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,19 +65,24 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
-
         // Aqui es donde ejecuta las funciones
         when (item.itemId) {
             R.id.nav_lista_plantas -> {
+                // listar plantas sirve para Mostrar una lista de las plantas que han sido registradas y aprobadas previamente.
 
                 loadListarPlantas(fragListarPlantas = ListaPlantasFragment())
-
             }
+             // listar plantas pendientes sirve para Listar las plantas reportadas por el usuario: En esta opción el usuario ve todas las plantas que ha reportado y su estado actual (“aprobada”,
+            //“rechazada”, “en estudio”).
+
             R.id.nav_listar_plantas_pendientes -> {
 
                 loadListarPlantasPendientes(fragListarPlantasPendientes = ListarPlantasPendientesFragment())
 
             }
+
+            // gestionar recolectores permite aceptar o rechazar a un solicitante
+
             R.id.nav_gestionar_recolectores -> {
 
                 loadGestionarRecolectores(fragGestionarRecolectores = GestionarRecolectoresFragment())
@@ -88,6 +93,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_salir -> {
+                mostrarAgregarPokemon();
 
             }
             R.id.nav_send -> {
@@ -99,6 +105,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
+
+
+
+    // funcion para llamar
     private fun loadListarPlantas(fragListarPlantas: ListaPlantasFragment) {
         val fm = supportFragmentManager.beginTransaction()
         fm.replace( R.id.frameLayout, fragListarPlantas)
@@ -132,6 +142,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val fm = supportFragmentManager.beginTransaction()
         fm.replace( R.id.frameLayout, frag3)
         fm.commit()
+    }
+
+    fun mostrarAgregarPokemon(){
+        val agregarPokemon = AgregarPokemonFragment()
+        agregarPokemon.setStyle(
+            DialogFragment.STYLE_NORMAL,
+            R.style.DialogoTitulo
+        )
+
     }
 
 
